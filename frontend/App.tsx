@@ -1,4 +1,4 @@
-import { AppleIcon, PlayIcon, TrendingDown, PiggyBank, Shield, Smartphone } from "lucide-react";
+import { AppleIcon, PlayIcon, Eye, PiggyBank, Shield, Smartphone } from "lucide-react";
 import { useEffect } from "react";
 
 export default function App() {
@@ -97,7 +97,7 @@ export default function App() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <FeatureCard
-              icon={<TrendingDown className="w-10 h-10" />}
+              icon={<Eye className="w-10 h-10" />}
               title="Your Privacy Is Permanent"
               description="We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete it all at any time."
             />
