@@ -5,7 +5,7 @@ export default function App() {
     <div className="min-h-screen bg-black text-lime-500">
       {/* Hero Section */}
       <header className="px-6 py-20 text-center">
-        <h1 className="text-6xl font-bold mb-4 text-lime-400">Gripah</h1>
+        <img src="/gripah-logo.png" alt="Gripah" className="h-24 mx-auto mb-6" />
         <p className="text-2xl text-lime-500/90 mb-2">Keep Your Mind On Your Money</p>
         <p className="text-lg text-lime-500/70">The smart budget tracker that helps you save more</p>
       </header>
