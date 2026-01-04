@@ -104,8 +104,8 @@ export default function App() {
             
             <FeatureCard
               icon={<PiggyBank className="w-10 h-10" />}
-              title="Smart Savings Goals"
-              description="Set personalized savings targets and watch your progress. Gripah helps you stay motivated and reach your financial goals faster."
+              title="Smart Budgeting Goals"
+              description="Set personalized budgeting targets and watch your progress. Gripah helps you spend less money, save more money, track your necessary spending, and reach your financial goals faster."
             />
             
             <FeatureCard
