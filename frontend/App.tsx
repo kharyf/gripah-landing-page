@@ -73,17 +73,6 @@ export default function App() {
               description="No complex features or confusing menus. Just open the app, log your expenses, and get instant insights in seconds."
             />
           </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-xl text-lime-400 mb-6">
-              Join thousands of users who've already saved over $10M collectively
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center items-center">
-              <StatBadge label="4.8★ Rating" />
-              <StatBadge label="50K+ Downloads" />
-              <StatBadge label="Free to Use" />
-            </div>
-          </div>
         </div>
       </main>
 
