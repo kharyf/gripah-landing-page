@@ -12,7 +12,38 @@ export default function App() {
 
       {/* Features Section */}
       <main className="max-w-5xl mx-auto px-6 py-16">
-        <div className="bg-neutral-900 rounded-2xl p-12 mb-16">
+        {/* Download Section */}
+        <div className="text-center mb-16">
+          <h3 className="text-2xl font-semibold mb-8 text-lime-400">
+            Download Gripah Today
+          </h3>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a
+              href="#"
+              className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
+            >
+              <AppleIcon className="w-8 h-8" />
+              <div className="text-left">
+                <div className="text-xs">Download on the</div>
+                <div className="text-lg font-bold">App Store</div>
+              </div>
+            </a>
+            
+            <a
+              href="#"
+              className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
+            >
+              <PlayIcon className="w-8 h-8" fill="currentColor" />
+              <div className="text-left">
+                <div className="text-xs">GET IT ON</div>
+                <div className="text-lg font-bold">Google Play</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div className="bg-neutral-900 rounded-2xl p-12">
           <h2 className="text-3xl font-bold text-center mb-12 text-lime-400">
             Why Choose Gripah?
           </h2>
@@ -52,37 +83,6 @@ export default function App() {
               <StatBadge label="50K+ Downloads" />
               <StatBadge label="Free to Use" />
             </div>
-          </div>
-        </div>
-
-        {/* Download Section */}
-        <div className="text-center">
-          <h3 className="text-2xl font-semibold mb-8 text-lime-400">
-            Download Gripah Today
-          </h3>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <a
-              href="#"
-              className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
-            >
-              <AppleIcon className="w-8 h-8" />
-              <div className="text-left">
-                <div className="text-xs">Download on the</div>
-                <div className="text-lg font-bold">App Store</div>
-              </div>
-            </a>
-            
-            <a
-              href="#"
-              className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
-            >
-              <PlayIcon className="w-8 h-8" fill="currentColor" />
-              <div className="text-left">
-                <div className="text-xs">GET IT ON</div>
-                <div className="text-lg font-bold">Google Play</div>
-              </div>
-            </a>
           </div>
         </div>
       </main>
