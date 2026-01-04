@@ -78,7 +78,7 @@ export default function App() {
       {/* Footer */}
       <footer className="text-center py-12 px-6 border-t border-lime-500/20">
         <p className="text-lime-500/60 text-sm">
-          © 2024 Gripah. All rights reserved.
+          © 2026 Gripah. All rights reserved.
         </p>
       </footer>
     </div>
