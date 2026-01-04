@@ -4,14 +4,13 @@ export default function App() {
   return (
     <div className="min-h-screen bg-black text-lime-500">
       {/* Hero Section */}
-      <header className="px-6 py-20 text-center">
+      <header className="px-6 py-12 text-center">
         <img src="/gripah-logo.png" alt="Gripah" className="h-24 mx-auto mb-6" />
-        <p className="text-2xl text-lime-500/90 mb-2">Keep Your Mind On Your Money</p>
-        <p className="text-lg text-lime-500/70">The smart budget tracker that helps you save more</p>
+        <p className="text-2xl text-lime-500/90">Keep Your Mind On Your Money</p>
       </header>
 
       {/* Features Section */}
-      <main className="max-w-5xl mx-auto px-6 py-16">
+      <main className="max-w-5xl mx-auto px-6 py-8">
         {/* Download Section */}
         <div className="text-center mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-lime-400">
