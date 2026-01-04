@@ -1,6 +1,54 @@
 import { AppleIcon, PlayIcon, TrendingDown, PiggyBank, Shield, Smartphone } from "lucide-react";
+import { useEffect } from "react";
 
 export default function App() {
+  useEffect(() => {
+    document.title = "Gripah - Keep Your Mind On Your Money";
+    
+    const metaTags = [
+      { name: "description", content: "Gripah is a privacy-first expense tracking app that helps you manage your finances securely. Track spending, set savings goals, and gain financial insights without compromising your privacy." },
+      { name: "keywords", content: "expense tracker, budget app, financial app, privacy-first, savings goals, personal finance, money management" },
+      { name: "author", content: "Gripah" },
+      { name: "robots", content: "index, follow" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Gripah - Keep Your Mind On Your Money" },
+      { property: "og:description", content: "Privacy-first expense tracking app. Track your spending, set savings goals, and manage your finances securely. Your data stays on your device." },
+      { property: "og:url", content: "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev" },
+      { property: "og:image", content: "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev/gripah-logo.png" },
+      { property: "og:image:alt", content: "Gripah Logo" },
+      { property: "og:site_name", content: "Gripah" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Gripah - Keep Your Mind On Your Money" },
+      { name: "twitter:description", content: "Privacy-first expense tracking app. Track your spending, set savings goals, and manage your finances securely. Your data stays on your device." },
+      { name: "twitter:image", content: "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev/gripah-logo.png" },
+      { name: "twitter:image:alt", content: "Gripah Logo" },
+      { name: "theme-color", content: "#000000" }
+    ];
+
+    metaTags.forEach(({ name, property, content }) => {
+      const existingTag = document.querySelector(
+        name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+      );
+      
+      if (existingTag) {
+        existingTag.setAttribute("content", content);
+      } else {
+        const meta = document.createElement("meta");
+        if (name) meta.setAttribute("name", name);
+        if (property) meta.setAttribute("property", property);
+        meta.setAttribute("content", content);
+        document.head.appendChild(meta);
+      }
+    });
+
+    const canonicalLink = document.querySelector('link[rel="canonical"]') || document.createElement("link");
+    canonicalLink.setAttribute("rel", "canonical");
+    canonicalLink.setAttribute("href", "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev");
+    if (!document.querySelector('link[rel="canonical"]')) {
+      document.head.appendChild(canonicalLink);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-lime-500">
       {/* Hero Section */}
