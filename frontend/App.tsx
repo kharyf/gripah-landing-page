@@ -63,7 +63,7 @@ export default function App() {
             <FeatureCard
               icon={<Shield className="w-10 h-10" />}
               title="Bank-Level Security"
-              description="Your financial data is protected with industry-leading encryption. We never sell your information to third parties."
+              description="Your premium tier purchase information is protected with industry-leading encryption. We don't store your card information. Hackers can't harm you though us."
             />
             
             <FeatureCard
