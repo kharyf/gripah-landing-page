@@ -12806,7 +12806,7 @@ function App() {
             {
               icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Eye, { className: "w-10 h-10" }),
               title: "Your Privacy Is Permanent",
-              description: "We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete it all at any time."
+              description: "We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete them all at any time."
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
