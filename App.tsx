@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export default function App() {
   useEffect(() => {
     document.title = "Gripah - Keep Your Mind On Your Money";
-    
+
     const metaTags = [
       { name: "description", content: "Gripah is a privacy-first expense tracking app that helps you manage your finances securely. Track spending, set savings goals, and gain financial insights without compromising your privacy." },
       { name: "keywords", content: "expense tracker, budget app, financial app, privacy-first, savings goals, personal finance, money management" },
@@ -29,7 +29,7 @@ export default function App() {
       const existingTag = document.querySelector(
         name ? `meta[name="${name}"]` : `meta[property="${property}"]`
       );
-      
+
       if (existingTag) {
         existingTag.setAttribute("content", content);
       } else {
@@ -62,9 +62,9 @@ export default function App() {
         {/* Download Section */}
         <div className="text-center mb-16">
           <h3 className="text-2xl font-semibold mb-8 text-lime-400">
-            Download Gripah Today
+            Coming Soon To Your Favorite App Distributor
           </h3>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
               href="#"
@@ -76,7 +76,7 @@ export default function App() {
                 <div className="text-lg font-bold">App Store</div>
               </div>
             </a>
-            
+
             <a
               href="#"
               className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
@@ -94,26 +94,26 @@ export default function App() {
           <h2 className="text-3xl font-bold text-center mb-12 text-lime-400">
             Why Choose Gripah?
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <FeatureCard
               icon={<Eye className="w-10 h-10" />}
               title="Your Privacy Is Permanent"
               description="We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete it all at any time."
             />
-            
+
             <FeatureCard
               icon={<PiggyBank className="w-10 h-10" />}
               title="Smart Budgeting Goals"
               description="Set personalized budgeting targets and watch your progress. Gripah helps you spend less money, save more money, track your necessary spending, and reach your financial goals faster."
             />
-            
+
             <FeatureCard
               icon={<Shield className="w-10 h-10" />}
               title="Bank-Level Security"
               description="Your premium tier purchase information is protected with industry-leading encryption. We don't store your card information. Hackers can't harm you though us."
             />
-            
+
             <FeatureCard
               icon={<Smartphone className="w-10 h-10" />}
               title="Simple & Intuitive"
@@ -133,14 +133,14 @@ export default function App() {
   );
 }
 
-function FeatureCard({ 
-  icon, 
-  title, 
-  description 
-}: { 
-  icon: React.ReactNode; 
-  title: string; 
-  description: string; 
+function FeatureCard({
+  icon,
+  title,
+  description
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
 }) {
   return (
     <div className="bg-black border border-lime-500/30 rounded-xl p-6 hover:border-lime-500/60 transition-colors duration-200">
