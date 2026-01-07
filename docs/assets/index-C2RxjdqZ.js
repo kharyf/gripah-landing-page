@@ -12766,7 +12766,7 @@ function App() {
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "max-w-5xl mx-auto px-6 py-2", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold mb-8 text-lime-400", children: "Download Gripah Today" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold mb-8 text-lime-400", children: "Coming Soon To Your Favorite App Distributor" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col sm:flex-row gap-6 justify-center items-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
@@ -12806,7 +12806,7 @@ function App() {
             {
               icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Eye, { className: "w-10 h-10" }),
               title: "Your Privacy Is Permanent",
-              description: "We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete them all at any time."
+              description: "We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete it all at any time."
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -12822,7 +12822,7 @@ function App() {
             {
               icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Shield, { className: "w-10 h-10" }),
               title: "Bank-Level Security",
-              description: "Your premium tier purchase information is protected with industry leading encryption. We don't store your card information. Hackers can't harm you though us."
+              description: "Your premium tier purchase information is protected with industry-leading encryption. We don't store your card information. Hackers can't harm you though us."
             }
           ),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
