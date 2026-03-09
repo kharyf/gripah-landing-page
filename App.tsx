@@ -1,56 +1,11 @@
 import { AppleIcon, PlayIcon, Eye, PiggyBank, Shield, Smartphone } from "lucide-react";
 import { useEffect } from "react";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import PrivacyPage from "./PrivacyPage";
 
-export default function App() {
-  useEffect(() => {
-    document.title = "Gripah - Keep Your Mind On Your Money";
-
-    const metaTags = [
-      { name: "description", content: "Gripah is a privacy-first expense tracking app that helps you manage your finances securely. Track spending, set savings goals, and gain financial insights without compromising your privacy." },
-      { name: "keywords", content: "expense tracker, budget app, financial app, privacy-first, savings goals, personal finance, money management" },
-      { name: "author", content: "Gripah" },
-      { name: "robots", content: "index, follow" },
-      { property: "og:type", content: "website" },
-      { property: "og:title", content: "Gripah - Keep Your Mind On Your Money" },
-      { property: "og:description", content: "Privacy-first expense tracking app. Track your spending, set savings goals, and manage your finances securely. Your data stays on your device." },
-      { property: "og:url", content: "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev" },
-      { property: "og:image", content: "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev/gripah-logo.png" },
-      { property: "og:image:alt", content: "Gripah Logo" },
-      { property: "og:site_name", content: "Gripah" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Gripah - Keep Your Mind On Your Money" },
-      { name: "twitter:description", content: "Privacy-first expense tracking app. Track your spending, set savings goals, and manage your finances securely. Your data stays on your device." },
-      { name: "twitter:image", content: "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev/gripah-logo.png" },
-      { name: "twitter:image:alt", content: "Gripah Logo" },
-      { name: "theme-color", content: "#000000" }
-    ];
-
-    metaTags.forEach(({ name, property, content }) => {
-      const existingTag = document.querySelector(
-        name ? `meta[name="${name}"]` : `meta[property="${property}"]`
-      );
-
-      if (existingTag) {
-        existingTag.setAttribute("content", content);
-      } else {
-        const meta = document.createElement("meta");
-        if (name) meta.setAttribute("name", name);
-        if (property) meta.setAttribute("property", property);
-        meta.setAttribute("content", content);
-        document.head.appendChild(meta);
-      }
-    });
-
-    const canonicalLink = document.querySelector('link[rel="canonical"]') || document.createElement("link");
-    canonicalLink.setAttribute("rel", "canonical");
-    canonicalLink.setAttribute("href", "https://gripah-landing-page-d5da2ic82vjumve69lq0.lp.dev");
-    if (!document.querySelector('link[rel="canonical"]')) {
-      document.head.appendChild(canonicalLink);
-    }
-  }, []);
-
+function HomePage() {
   return (
-    <div className="min-h-screen bg-black text-lime-500">
+    <>
       {/* Hero Section */}
       <header className="px-6 py-12 text-center">
         <img src="/gripah-logo.png" alt="Gripah" className="h-24 mx-auto mb-6" />
@@ -122,14 +77,81 @@ export default function App() {
           </div>
         </div>
       </main>
+    </>
+  );
+}
 
-      {/* Footer */}
-      <footer className="text-center py-12 px-6 border-t border-lime-500/20">
-        <p className="text-lime-500/60 text-sm">
-          © 2026 Gripah. All rights reserved.
-        </p>
-      </footer>
-    </div>
+export default function App() {
+  useEffect(() => {
+    document.title = "Gripah - Keep Your Mind On Your Money";
+
+    const metaTags = [
+      { name: "description", content: "Gripah is a privacy-first expense tracking app that helps you manage your finances securely. Track spending, set savings goals, and gain financial insights without compromising your privacy." },
+      { name: "keywords", content: "expense tracker, budget app, financial app, privacy-first, savings goals, personal finance, money management" },
+      { name: "author", content: "Gripah" },
+      { name: "robots", content: "index, follow" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Gripah - Keep Your Mind On Your Money" },
+      { property: "og:description", content: "Privacy-first expense tracking app. Track your spending, set savings goals, and manage your finances securely. Your data stays on your device." },
+      { property: "og:url", content: "https://www.gripah.com" },
+      { property: "og:image", content: "https://www.gripah.com/gripah-logo.png" },
+      { property: "og:image:alt", content: "Gripah Logo" },
+      { property: "og:site_name", content: "Gripah" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Gripah - Keep Your Mind On Your Money" },
+      { name: "twitter:description", content: "Privacy-first expense tracking app. Track your spending, set savings goals, and manage your finances securely. Your data stays on your device." },
+      { name: "twitter:image", content: "https://www.gripah.com/gripah-logo.png" },
+      { name: "twitter:image:alt", content: "Gripah Logo" },
+      { name: "theme-color", content: "#000000" }
+    ];
+
+    metaTags.forEach(({ name, property, content }) => {
+      const existingTag = document.querySelector(
+        name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+      );
+
+      if (existingTag) {
+        existingTag.setAttribute("content", content);
+      } else {
+        const meta = document.createElement("meta");
+        if (name) meta.setAttribute("name", name);
+        if (property) meta.setAttribute("property", property);
+        meta.setAttribute("content", content);
+        document.head.appendChild(meta);
+      }
+    });
+
+    const canonicalLink = document.querySelector('link[rel="canonical"]') || document.createElement("link");
+    canonicalLink.setAttribute("rel", "canonical");
+    canonicalLink.setAttribute("href", "https://www.gripah.com");
+    if (!document.querySelector('link[rel="canonical"]')) {
+      document.head.appendChild(canonicalLink);
+    }
+  }, []);
+
+  return (
+    <Router>
+      <div className="min-h-screen bg-black text-lime-500">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
+        </Routes>
+
+        {/* Footer */}
+        <footer className="text-center py-12 px-6 border-t border-lime-500/20">
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-lime-500/60 text-sm">
+              © 2026 Gripah. All rights reserved.
+            </p>
+            <nav className="flex gap-6">
+              <Link to="/privacy" className="text-lime-500/40 hover:text-lime-400 text-sm transition-colors duration-200">
+                Privacy Policy
+              </Link>
+            </nav>
+          </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
@@ -148,13 +170,5 @@ function FeatureCard({
       <h3 className="text-xl font-semibold mb-3 text-lime-400">{title}</h3>
       <p className="text-lime-500/80 leading-relaxed">{description}</p>
     </div>
-  );
-}
-
-function StatBadge({ label }: { label: string }) {
-  return (
-    <span className="bg-lime-500/10 border border-lime-500/30 px-6 py-2 rounded-full text-lime-400 font-medium">
-      {label}
-    </span>
   );
 }
