@@ -1,14 +1,61 @@
 import { AppleIcon, PlayIcon, Eye, PiggyBank, Shield, Smartphone } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PrivacyPage from "./PrivacyPage";
+
+const screenshots = [
+  "/Screenshots/IMG_6247.PNG",
+  "/Screenshots/IMG_6248.PNG",
+  "/Screenshots/IMG_6250.PNG",
+  "/Screenshots/IMG_6251.PNG",
+  "/Screenshots/IMG_6252.PNG",
+  "/Screenshots/IMG_6253.PNG",
+  "/Screenshots/IMG_6254.PNG",
+  "/Screenshots/IMG_6255.PNG",
+  "/Screenshots/IMG_6256.PNG",
+  "/Screenshots/IMG_6257.PNG",
+  "/Screenshots/IMG_6263.PNG",
+];
+
+function ScreenshotCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex((prev) => (prev + 1) % screenshots.length);
+        setIsTransitioning(false);
+      }, 500);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full aspect-[9/19.5]">
+      {screenshots.map((src, index) => (
+        <img
+          key={src}
+          src={src}
+          alt={`Screenshot ${index + 1}`}
+          className="absolute top-0 left-0 w-full h-full object-contain rounded-2xl border-2 border-lime-500 transition-opacity duration-500"
+          style={{ opacity: index === activeIndex ? 1 : 0 }}
+        />
+      ))}
+    </div>
+  );
+}
 
 function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <header className="px-6 py-12 text-center">
-        <img src="/GripahLogo.png" alt="Gripah" className="h-24 mx-auto mb-6" />
+      <header className="px-6 py-12 text-center flex flex-col items-center">
+        <div className="flex items-center gap-6 mb-6">
+          <img src="/GripahSquareLogo.png" alt="Gripah Square" className="h-24" />
+          <img src="/GripahLogo.png" alt="Gripah" className="h-24" />
+        </div>
         <p className="text-2xl text-lime-500/90">Keep Your Mind On Your Money</p>
       </header>
 
@@ -50,7 +97,11 @@ function HomePage() {
             Why Choose Gripah?
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
+            <div className="h-auto min-h-[500px]">
+              <ScreenshotCarousel />
+            </div>
+            <div className="grid gap-2">
             <FeatureCard
               icon={<Eye className="w-10 h-10" />}
               title="Your Privacy Is Permanent"
@@ -74,6 +125,7 @@ function HomePage() {
               title="Simple & Intuitive"
               description="No complex features or confusing menus. Just open the app, log your expenses, and get instant insights in seconds."
             />
+            </div>
           </div>
         </div>
       </main>
@@ -131,7 +183,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-black text-lime-500">
+      <div className="min-h-screen text-lime-500">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
@@ -165,9 +217,11 @@ function FeatureCard({
   description: string;
 }) {
   return (
-    <div className="bg-black border border-lime-500/30 rounded-xl p-6 hover:border-lime-500/60 transition-colors duration-200">
-      <div className="text-lime-400 mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold mb-3 text-lime-400">{title}</h3>
+    <div className="bg-black border border-lime-500/30 rounded-xl p-1 hover:border-lime-500/60 transition-colors duration-200">
+      <div className="flex items-center gap-4 mb-4">
+        <div className="text-lime-400">{icon}</div>
+        <h3 className="text-xl font-semibold text-lime-400">{title}</h3>
+      </div>
       <p className="text-lime-500/80 leading-relaxed">{description}</p>
     </div>
   );

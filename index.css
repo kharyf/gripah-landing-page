@@ -87,6 +87,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --perspective-1000: 1000px;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -126,5 +127,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% 20%, rgba(132, 204, 22, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at center, #1a2e1a 0%, #0a140a 40%, #020302 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 }
