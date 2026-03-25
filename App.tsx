@@ -8,7 +8,7 @@ function HomePage() {
     <>
       {/* Hero Section */}
       <header className="px-6 py-12 text-center">
-        <img src="/gripah-logo.png" alt="Gripah" className="h-24 mx-auto mb-6" />
+        <img src="/GripahLogo.png" alt="Gripah" className="h-24 mx-auto mb-6" />
         <p className="text-2xl text-lime-500/90">Keep Your Mind On Your Money</p>
       </header>
 
