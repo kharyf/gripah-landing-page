@@ -102,29 +102,29 @@ function HomePage() {
               <ScreenshotCarousel />
             </div>
             <div className="grid gap-2">
-            <FeatureCard
-              icon={<Eye className="w-10 h-10" />}
-              title="Your Privacy Is Permanent"
-              description="We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete it all at any time."
-            />
+              <FeatureCard
+                icon={<Eye className="w-10 h-10" />}
+                title="Your Privacy Is Permanent"
+                description="We don't collect your data. We don't sell your data. We don't want your data. The transactions that you choose to add to Gripah stay on your device and you can delete them all at any time."
+              />
 
-            <FeatureCard
-              icon={<PiggyBank className="w-10 h-10" />}
-              title="Smart Budgeting Goals"
-              description="Set personalized budgeting targets and watch your progress. Gripah helps you spend less money, save more money, track your necessary spending, and reach your financial goals faster."
-            />
+              <FeatureCard
+                icon={<PiggyBank className="w-10 h-10" />}
+                title="Smart Budgeting Goals"
+                description="Set personalized budgeting targets and watch your progress. Gripah helps you spend less, save more, track your spending, and reach your financial goals faster."
+              />
 
-            <FeatureCard
-              icon={<Shield className="w-10 h-10" />}
-              title="Bank-Level Security"
-              description="Your premium tier purchase information is protected with industry-leading encryption. We don't store your card information. Hackers can't harm you though us."
-            />
+              <FeatureCard
+                icon={<Shield className="w-10 h-10" />}
+                title="Bank-Level Security"
+                description="Your premium tier purchase information is protected with industry-leading encryption. We don't store your card information. Hackers can't harm you though us."
+              />
 
-            <FeatureCard
-              icon={<Smartphone className="w-10 h-10" />}
-              title="Simple & Intuitive"
-              description="No complex features or confusing menus. Just open the app, log your expenses, and get instant insights in seconds."
-            />
+              <FeatureCard
+                icon={<Smartphone className="w-10 h-10" />}
+                title="Simple & Intuitive"
+                description="No complex features or confusing menus. Just open the app, log your expenses, and get instant insights in seconds."
+              />
             </div>
           </div>
         </div>
