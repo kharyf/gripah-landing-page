@@ -74,8 +74,8 @@ export default function PrivacyPage() {
                                 Used for secure user authentication (Cognito) and backend API services (AppSync). Your email and user ID are processed by AWS to manage your account.
                             </li>
                             <li className="bg-neutral-900/50 border border-lime-500/10 rounded-xl p-6">
-                                <strong className="block text-white text-lg mb-2">Stripe</strong>
-                                Used for processing subscription payments. When you subscribe to Premium, your payment details are handled directly by Stripe. Gripah does not see or store your credit card information.
+                                <strong className="block text-white text-lg mb-2">Apple App Store & Google Play</strong>
+                                Used for processing subscription payments via native in-app purchases. When you subscribe to Premium, your payment details are handled entirely by Apple or Google. Gripah does not see or store your payment information.
                             </li>
                             <li className="bg-neutral-900/50 border border-lime-500/10 rounded-xl p-6">
                                 <strong className="block text-white text-lg mb-2">Google AdMob</strong>

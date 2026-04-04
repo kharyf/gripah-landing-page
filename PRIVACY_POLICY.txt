@@ -27,7 +27,7 @@ Information about your spending categories, item names, dates, and amounts is st
 We integrate with the following third-party services to provide core app functionality:
 
 - Amazon Web Services (AWS): Used for secure user authentication (Cognito) and backend API services (AppSync). Your email and user ID are processed by AWS to manage your account.
-- Stripe: Used for processing subscription payments. When you subscribe to Premium, your payment details are handled directly by Stripe. Gripah does not see or store your credit card information.
+- Apple App Store & Google Play: Used for processing subscription payments via native in-app purchases. When you subscribe to Premium, your payment details are handled entirely by Apple or Google. Gripah does not see or store your payment information.
 - Google AdMob: Used to display advertisements to users of the free version of the App. AdMob may collect and use device identifiers for advertising purposes.
 
 4. DATA RETENTION AND DELETION

@@ -2,6 +2,7 @@ import { AppleIcon, PlayIcon, Eye, PiggyBank, Shield, Smartphone } from "lucide-
 import { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PrivacyPage from "./PrivacyPage";
+import SupportPage from "./SupportPage";
 
 const screenshots = [
   "/Screenshots/IMG_6247.PNG",
@@ -187,6 +188,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/support" element={<SupportPage />} />
         </Routes>
 
         {/* Footer */}
@@ -198,6 +200,9 @@ export default function App() {
             <nav className="flex gap-6">
               <Link to="/privacy" className="text-lime-500/40 hover:text-lime-400 text-sm transition-colors duration-200">
                 Privacy Policy
+              </Link>
+              <Link to="/support" className="text-lime-500/40 hover:text-lime-400 text-sm transition-colors duration-200">
+                Support
               </Link>
             </nav>
           </div>
