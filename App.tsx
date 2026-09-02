@@ -1,4 +1,4 @@
-import { AppleIcon, PlayIcon, Eye, PiggyBank, Shield, Smartphone } from "lucide-react";
+import { AppleIcon, Eye, PiggyBank, Shield, Smartphone } from "lucide-react";
 import { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PrivacyPage from "./PrivacyPage";
@@ -70,24 +70,13 @@ function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/gripah/id6757166411"
               className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
             >
               <AppleIcon className="w-8 h-8" />
               <div className="text-left">
                 <div className="text-xs">Download on the</div>
                 <div className="text-lg font-bold">App Store</div>
-              </div>
-            </a>
-
-            <a
-              href="#"
-              className="inline-flex items-center gap-3 bg-lime-500 hover:bg-lime-400 text-black font-semibold px-8 py-4 rounded-xl transition-colors duration-200 shadow-lg shadow-lime-500/20"
-            >
-              <PlayIcon className="w-8 h-8" fill="currentColor" />
-              <div className="text-left">
-                <div className="text-xs">GET IT ON</div>
-                <div className="text-lg font-bold">Google Play</div>
               </div>
             </a>
           </div>
@@ -184,7 +173,18 @@ export default function App() {
 
   return (
     <Router>
-      <div className="min-h-screen text-lime-500">
+      {/* Background video */}
+      <video
+        className="fixed inset-0 w-full h-full object-cover -z-10"
+        src="./BGArt/BGVideo.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+      <div className="fixed inset-0 -z-10 bg-black/60" />
+
+      <div className="relative min-h-screen text-lime-500">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
